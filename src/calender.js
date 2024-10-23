@@ -65,13 +65,13 @@ function updateCurrentDay() {
     const eventsList = document.createElement("ul");
     for (const event of currentDayEvents) {
       const eventItem = document.createElement("li");
-      eventItem.textContent = `${event.title} at ${event.time} (${event.location})`;
+      eventItem.textContent = `${event.title} ${event.time} (${event.location})`;
       eventsList.appendChild(eventItem);
     }
     currentDayDiv.appendChild(eventsList);
   } else {
     const noEventsMsg = document.createElement("p");
-    noEventsMsg.textContent = "Nothing Planned Today";
+    noEventsMsg.textContent = "Date passed";
     currentDayDiv.appendChild(noEventsMsg);
   }
 }

@@ -1,0 +1,159 @@
+:root {
+  /*Global Colors*/
+  --primary-color: #ffffff;
+  /*Typography*/
+  --main-font-family: "Prata", serif;
+  --secondary-font-family: "Tangerine", cursive;
+  --main-font-size: 16px;
+  --line-height: 1.6;
+  --primary-font-color: #333;
+  /*Color Theme*/
+  --main-color-theme:#6B6C20;
+  --secondary-color-theme: #BDBF5D;
+  /*padding and margin*/
+  --primary-margin: 20px;
+}
+
+.main-album {
+  margin-top: 35px;
+  padding: 20px;
+}
+
+div .col, .row {
+  padding: 0;
+  margin: 0;
+}
+
+.picha-sehemu {
+  font-size: 45px;
+  font-family: var(--secondary-font-family);
+  height: 50px;
+}
+
+.gallery {
+    --g: 6px; /* the gap */
+    display: grid;
+    width: 100%; /* the size */
+    aspect-ratio: 1;
+    grid: auto-flow 1fr/repeat(3,1fr);
+    gap: var(--g);
+  }
+  .gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+  }
+  .gallery img:nth-child(2) {
+    grid-area: 1/2/span 2/span 2;
+    clip-path: polygon(0 0,100% 0,100% 100%,calc(50% + var(--g)/4) 100%,0 calc(50% - var(--g)/4))
+  }
+  .gallery img:nth-child(3) {
+    grid-area: 2/1/span 2/span 2;
+    clip-path: polygon(0 0,calc(50% - var(--g)/4) 0,100% calc(50% + var(--g)/4),100% 100%,0 100%);
+  }
+
+#image-gaps {
+  margin-bottom: 10px;
+}
+img {
+    width: 100%;
+    height: 100%;
+    margin: 10px 10px 10px 0;
+    border-radius: 5px;
+}
+
+img:hover {
+    border-radius: 5px;
+}
+
+/* Lightbox styles */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.lightbox.active {
+  display: flex;
+  background-color: rgba(0,0,0,0.9);
+  justify-content: center; /*center h*/
+  align-items: center; /*center v*/
+  overflow: auto; 
+}
+
+.lightbox-content {
+  margin: auto;
+  max-width: 90%;
+  max-height: 80%;
+  width: auto; /* Maintain image aspect ratio */
+  height: auto; /* Maintain image aspect ratio */
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8); /* Add subtle shadow for better visibility */
+}
+
+.lightbox img {
+  display: block;
+  margin: 0 0 0 5px;
+  padding: 0;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 26px 16px;
+  margin-top: -0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 10px;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 10px;
+  border-radius: 0 3px 3px 0;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+@media only screen and (max-width: 700px) {
+  .lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+  }
+}

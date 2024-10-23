@@ -59,15 +59,22 @@ top: 0px; /* Position the navbar at the top of the page */
 width: 100%; /* Full width */
 z-index: 9999; /*kep navbar alway on top of content*/
 }
+
 #nav-active-page {
 font-family: var(--secondary-font-family);
+font-weight: 700;
 text-decoration: underline white;
-font-size: 25px;
+font-size: 35px;
 line-height: 1;
 background-color: var(--primary-color);
 border-radius: 6px;
 color: var(--primary-font-color);
 }
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.877);
+}
+
 
 li #program-section:hover {
 text-decoration: overline underline ;

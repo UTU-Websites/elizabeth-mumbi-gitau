@@ -112,7 +112,7 @@ h3 {
 .week-calendar .day {
   position: relative;
   padding: 10px;
-  margin: 10px;
+  margin: 10px 0;
   border: 1.5px solid #ddd;
   border-radius: 4px;
 }

@@ -2,7 +2,7 @@
   /*Global Colors*/
   --primary-color: #ffffff;
   /*Typography*/
-  --main-font-family: "Prata", serif;
+  --main-font-family: "Playfair Display", serif;
   --secondary-font-family: "Tangerine", cursive;
   --main-font-size: 17px;
   --line-height: 1.6;
@@ -31,6 +31,7 @@ div {
   font-size: var(--main-font-size);
   line-height: var(--line-height);
   font-style: normal;
+  font-optical-sizing: auto;
   font-weight: 500;
   color: var(--primary-font-color);
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);

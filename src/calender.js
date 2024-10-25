@@ -69,17 +69,17 @@ const events = [
   { day: 3, date: '2024-10-23', title: "Committee Meeting", time: "07:00 PM", location: "Gitau Family Residence" },
   { day: 4, date: '2024-10-24', title: "Macakaya ~ Wake", time: "04:00 PM", location: "Gitau Family Residence" },
   { day: 4, date: '2024-10-24', title: "Committee Meeting", time: "07:00 PM", location: "Gitau Family Residence" },
-  { day: 5, date: '2024-10-25', title: "Macakaya ~ Wake", time: "04:00 PM", location: "Gitau Family Residence" },
+  { day: 5, date: '2024-10-25', title: "Macakaya ~ Wake Service lead by Evg. J. Njenga ", time: "04:00 PM", location: "Gitau Family Residence" },
   { day: 5, date: '2024-10-25', title: "Committee Meeting", time: "07:00 PM", location: "Gitau Family Residence" },
-  { day: 6, date: '2024-10-26', title: "Service lead by P.C.M.F Macakaya ~ Wake", time: "04:00 PM", location: "Gitau Family Residence" },
+  { day: 6, date: '2024-10-26', title: "Macakaya ~ Wake Service lead by P.C.M.F ", time: "04:00 PM", location: "Gitau Family Residence" },
   { day: 6, date: '2024-10-26', title: "Committee Meeting", time: "07:00 PM", location: "Gitau Family Residence" },
-  { day: 0, date: '2024-10-27', title: "Church Service", time: "03:00 PM", location: "P.C.E.A Kihumo Church, Rironi" },
+  { day: 0, date: '2024-10-27', title: "CHURCH SERVICE", time: "03:00 PM", location: "P.C.E.A Kihumo Church, Rironi" },
   { day: 0, date: '2024-10-27', title: "Committee Meeting", time: "07:00 PM", location: "Gitau Family Residence" },
   { day: 1, date: '2024-10-28', title: "Macakaya ~ Wake", time: "04:00 PM", location: "Gitau Family Residence" },
   { day: 1, date: '2024-10-28', title: "Committee Meeting", time: "07:00 PM", location: "Gitau Family Residence" },
-  { day: 2, date: '2024-10-29', title: "Service lead by Women's Guild Macakaya ~ Wake", time: "04:00 PM", location: "Gitau Family Residence" },
+  { day: 2, date: '2024-10-29', title: "Macakaya ~ Wake Service lead by Women's Guild ", time: "04:00 PM", location: "Gitau Family Residence" },
   { day: 2, date: '2024-10-29', title: "Committee Meeting", time: "07:00 PM", location: "Gitau Family Residence" },
-  { day: 3, date: '2024-10-30', title: "FUNERAL SERVICE", time: "08:00 AM", location: "P.C.E.A Kihumo Church"}
+  { day: 3, date: '2024-10-30', title: "FUNERAL SERVICE", time: "08:00 AM", location: "P.C.E.A Kihumo Church, Rironi"}
 ];
 
 let startOfWeek = new Date();

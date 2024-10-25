@@ -150,6 +150,12 @@ ul {
   margin-top: 15px; /* Adjust spacing as necessary */
 }
 
+.emphasis-text {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 18px;
+}
+
 /*Google Maps Styling*/
 .google-map {
   padding-bottom: 50%;

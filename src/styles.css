@@ -146,6 +146,10 @@ ul {
   padding-top: 0;
 }
 
+.sunrise-sunset {
+  margin-top: 15px; /* Adjust spacing as necessary */
+}
+
 /*Google Maps Styling*/
 .google-map {
   padding-bottom: 50%;
@@ -622,7 +626,7 @@ div .main-wake {
   color: white;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
   body {
     /*Background Settings*/
     background-image: url("/images/utu-web-backgrounds/leaves-291024_1280.jpg");
@@ -640,6 +644,10 @@ div .main-wake {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+  }
+
+  .col {
+    width: 100%;
   }
 
 }

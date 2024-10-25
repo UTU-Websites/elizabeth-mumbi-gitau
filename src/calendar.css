@@ -86,6 +86,11 @@ h3 {
   font-size: 15px;
 }
 
+.crossed-out {
+  text-decoration: line-through;
+  color: gray; /* or any color to indicate past events */
+}
+
 .calendar_events{
   color:#A39D9E;
 }
@@ -160,4 +165,24 @@ h3 {
 .wk-nav-next {
   left: 15px;
   position: relative;
+}
+
+.copy-btn {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.copy-btn:hover {
+  background-color: #45a049;
+}
+
+.message {
+  color: green;
+  margin-left: 10px;
+  display: none;
 }

@@ -175,7 +175,7 @@
         </div>
         
         <!-- Column 3 -->
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4" id="upcoming-info">
           <div id="location-maps">
             <h2 class="o-title">Memorial Service</h2></br>
             <p>Date: <strong>Sunday, 27/10/2024</strong></br>
@@ -233,9 +233,24 @@
       <a href="https://utuwebsites.netlify.app/#about-us" class="">About Us</a> 
       <a href="https://utuwebsites.netlify.app/#contact" class="">Contacts</a>
     </footer>
-  </div>
 
 </div>
+
+<!-- Toast Structure (Bottom Center) -->
+<div class="position-fixed bottom-0 start-50 translate-middle-x p-3" style="z-index: 11">
+  <div id="pbnjToast" class="toast text-bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <strong class="me-auto">Event Notice</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Memorial Service on the 27/10/24
+      <div class="mt-2 pt-2 border-top">
+        <button type="button" class="btn btn-primary btn-sm"><a href="/index.html#upcoming-info" style="text-decoration: none; color: white; border-radius: 50px;">More Info</a></button>
+      </div>
+    </div>
+  </div>
+</div> 
 <!-- Bootstrap JS, and Popper.js -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>

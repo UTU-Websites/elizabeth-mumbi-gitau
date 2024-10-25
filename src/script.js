@@ -25,7 +25,15 @@ window.addEventListener('scroll', function () {
   lastScrollPosition = currentScrollPosition;
 });
 
+//alert toast
+document.addEventListener('DOMContentLoaded', function () {
+  var pbnjToast = new bootstrap.Toast(document.getElementById('pbnjToast'), {
+    delay: 15000  // 5 seconds
+  });
+  pbnjToast.show();
+});
 
+//important notice
 const toastTrigger = document.getElementById('liveToastBtn')
 const toastLiveExample = document.getElementById('liveToast')
 

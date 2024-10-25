@@ -69,9 +69,9 @@ const events = [
   { day: 3, date: '2024-10-23', title: "Committee Meeting", time: "07:00 PM", location: "Gitau Family Residence" },
   { day: 4, date: '2024-10-24', title: "Macakaya ~ Wake", time: "04:00 PM", location: "Gitau Family Residence" },
   { day: 4, date: '2024-10-24', title: "Committee Meeting", time: "07:00 PM", location: "Gitau Family Residence" },
-  { day: 5, date: '2024-10-25', title: "Service lead by P.C.M.F Macakaya ~ Wake", time: "04:00 PM", location: "Gitau Family Residence" },
+  { day: 5, date: '2024-10-25', title: "Macakaya ~ Wake", time: "04:00 PM", location: "Gitau Family Residence" },
   { day: 5, date: '2024-10-25', title: "Committee Meeting", time: "07:00 PM", location: "Gitau Family Residence" },
-  { day: 6, date: '2024-10-26', title: "Macakaya ~ Wake", time: "04:00 PM", location: "Gitau Family Residence" },
+  { day: 6, date: '2024-10-26', title: "Service lead by P.C.M.F Macakaya ~ Wake", time: "04:00 PM", location: "Gitau Family Residence" },
   { day: 6, date: '2024-10-26', title: "Committee Meeting", time: "07:00 PM", location: "Gitau Family Residence" },
   { day: 0, date: '2024-10-27', title: "Church Service", time: "03:00 PM", location: "P.C.E.A Kihumo Church, Rironi" },
   { day: 0, date: '2024-10-27', title: "Committee Meeting", time: "07:00 PM", location: "Gitau Family Residence" },
@@ -146,7 +146,7 @@ function generateWeekCalendar() {
       dayElement.appendChild(eventsList);
     } else {
       const noEventsMsg = document.createElement("p");
-      noEventsMsg.textContent = "Nothing Planned";
+      noEventsMsg.textContent = "No Activities";
       dayElement.appendChild(noEventsMsg);
     }
 

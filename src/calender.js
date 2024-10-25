@@ -65,13 +65,17 @@ const monthsOfYear = ["January", "February", "March", "April", "May", "June", "J
 
 // Event data
 const events = [
+  { day: 1, date: '2024-10-21', title: "Macakaya ~ Wake", time: "04:00 PM", location: "Gitau Family Residence" },
+  { day: 1, date: '2024-10-21', title: "Committee Meeting", time: "07:00 PM", location: "Gitau Family Residence" },
+  { day: 2, date: '2024-10-22', title: "Macakaya ~ Wake", time: "04:00 PM", location: "Gitau Family Residence" },
+  { day: 2, date: '2024-10-22', title: "Committee Meeting", time: "07:00 PM", location: "Gitau Family Residence" },
   { day: 3, date: '2024-10-23', title: "Macakaya ~ Wake", time: "04:00 PM", location: "Gitau Family Residence" },
   { day: 3, date: '2024-10-23', title: "Committee Meeting", time: "07:00 PM", location: "Gitau Family Residence" },
   { day: 4, date: '2024-10-24', title: "Macakaya ~ Wake", time: "04:00 PM", location: "Gitau Family Residence" },
   { day: 4, date: '2024-10-24', title: "Committee Meeting", time: "07:00 PM", location: "Gitau Family Residence" },
-  { day: 5, date: '2024-10-25', title: "Macakaya ~ Wake Service lead by Evg. J. Njenga ", time: "04:00 PM", location: "Gitau Family Residence" },
+  { day: 5, date: '2024-10-25', title: "Macakaya ~ Wake Service lead by Evg. J. Njenga", time: "04:00 PM", location: "Gitau Family Residence" },
   { day: 5, date: '2024-10-25', title: "Committee Meeting", time: "07:00 PM", location: "Gitau Family Residence" },
-  { day: 6, date: '2024-10-26', title: "Macakaya ~ Wake Service lead by P.C.M.F ", time: "04:00 PM", location: "Gitau Family Residence" },
+  { day: 6, date: '2024-10-26', title: "Macakaya ~ Wake Service lead by P.C.M.F", time: "04:00 PM", location: "Gitau Family Residence" },
   { day: 6, date: '2024-10-26', title: "Committee Meeting", time: "07:00 PM", location: "Gitau Family Residence" },
   { day: 0, date: '2024-10-27', title: "CHURCH SERVICE", time: "03:00 PM", location: "P.C.E.A Kihumo Church, Rironi" },
   { day: 0, date: '2024-10-27', title: "Committee Meeting", time: "07:00 PM", location: "Gitau Family Residence" },

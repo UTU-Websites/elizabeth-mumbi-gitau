@@ -16,7 +16,7 @@
 
 body {
   /*Background Settings*/
-  background-image: url("/images/utu-web-backgrounds/leaves-291024_1280.jpg");
+  background-image: url("https://lh3.googleusercontent.com/pw/AP1GczNyccN9AzsGc2fo-Rmshm7h6VMlOxbu7jqcjD5AyC1apleFL6YjoUqfUKluq4AYGjuEe4wq0SbgM_0m66GqADSeUai8XRFyERFlbcbbrSjdTC4PfTNZY56CbOiMMSS5T9Q-nWFJ1pp8S-SiPE_i9LFZ=w697-h523-s-no-gm?authuser=0");
   width: 100%;
   min-height: 100vh;
   background-position: center;
@@ -636,7 +636,7 @@ div .main-wake {
 @media screen and (max-width: 768px) {
   body {
     /*Background Settings*/
-    background-image: url("/images/utu-web-backgrounds/leaves-291024_1280.jpg");
+    background-image: url("https://lh3.googleusercontent.com/pw/AP1GczNyccN9AzsGc2fo-Rmshm7h6VMlOxbu7jqcjD5AyC1apleFL6YjoUqfUKluq4AYGjuEe4wq0SbgM_0m66GqADSeUai8XRFyERFlbcbbrSjdTC4PfTNZY56CbOiMMSS5T9Q-nWFJ1pp8S-SiPE_i9LFZ=w697-h523-s-no-gm?authuser=0");
     width: 100%;
     min-height: 100vh;
     background-position: center;

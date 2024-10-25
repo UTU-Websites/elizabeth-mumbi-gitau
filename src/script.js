@@ -28,7 +28,7 @@ window.addEventListener('scroll', function () {
 //alert toast
 document.addEventListener('DOMContentLoaded', function () {
   var pbnjToast = new bootstrap.Toast(document.getElementById('pbnjToast'), {
-    delay: 15000  // 5 seconds
+    delay: 7000 //seconds
   });
   pbnjToast.show();
 });

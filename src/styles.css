@@ -60,6 +60,7 @@ position: fixed; /* Set the navbar to fixed position */
 top: 0px; /* Position the navbar at the top of the page */
 width: 100%; /* Full width */
 z-index: 9999; /*kep navbar alway on top of content*/
+transition: top 0.3s;
 }
 
 #nav-active-page {

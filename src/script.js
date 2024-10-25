@@ -8,6 +8,24 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+let lastScrollPosition = 0;
+const navbar = document.getElementById('navbar');
+
+window.addEventListener('scroll', function () {
+  const currentScrollPosition = window.pageYOffset;
+
+  if (currentScrollPosition > lastScrollPosition) {
+    // Scrolling down
+    navbar.style.top = '-80px'; // Adjust for navbar height
+  } else {
+    // Scrolling up
+    navbar.style.top = '0';
+  }
+
+  lastScrollPosition = currentScrollPosition;
+});
+
+
 const toastTrigger = document.getElementById('liveToastBtn')
 const toastLiveExample = document.getElementById('liveToast')
 

@@ -47,11 +47,9 @@ div .col, .row {
   }
   .gallery img:nth-child(2) {
     grid-area: 1/2/span 2/span 2;
-    clip-path: polygon(0 0,100% 0,100% 100%,calc(100% + var(--g)/4) 100%,0 calc(100% - var(--g)/4))
   }
   .gallery img:nth-child(3) {
     grid-area: 2/1/span 2/span 2;
-    clip-path: polygon(0 0, calc(85% - var(--g) / 4) 0, 100% calc(50% + var(--g) / 4), 90% 100%, 0 100%);
   }
 
 #image-gaps {

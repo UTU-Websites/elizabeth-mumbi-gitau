@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const touchDiff = touchStartY - touchEndY;
 
         // Allow scrolling if the user is not trying to open the lightbox
-        if (Math.abs(touchDiff) > 30) { // Adjust the threshold as needed
+        if (Math.abs(touchDiff) > 50) { // Adjust the threshold as needed
             e.stopPropagation(); // Stop event propagation to prevent opening lightbox
         }
     });

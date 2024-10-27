@@ -7,11 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
     content.style.display = 'block';
   });
 });
+
 // JavaScript for Lightbox
 document.addEventListener('DOMContentLoaded', function() {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
-    const images = document.querySelectorAll('.picha-sanaa img'); // Use the correct image selector
+    const images = document.querySelectorAll('img');
     const slideshowToggle = document.getElementById('slideshow-toggle');
     let currentImageIndex;
     let slideshowInterval;
@@ -92,14 +93,10 @@ document.addEventListener('DOMContentLoaded', function() {
         slideshowToggle.textContent = isPlaying ? "Pause" : "Play";
     }
 
-    // Add click event listeners to images
+    // Add click and touch event listeners to images
     images.forEach((img, index) => {
         img.addEventListener('click', () => openLightbox(index));
-        
-        // Prevent right-click, touch context menu, and dragging
-        img.addEventListener('contextmenu', (e) => e.preventDefault()); // Prevent right-click
-        img.addEventListener('touchstart', (e) => e.preventDefault()); // Prevent touch context menu
-        img.addEventListener('dragstart', (e) => e.preventDefault()); // Prevent dragging
+        img.addEventListener('touchstart', () => openLightbox(index)); // Add touch event for mobile
     });
 
     // Add event listeners for controls
@@ -115,8 +112,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Prevent right-click and touch context menu on images
+    images.forEach(img => {
+        img.addEventListener('contextmenu', (e) => e.preventDefault()); // Prevent right-click
+        img.addEventListener('touchstart', (e) => e.preventDefault()); // Prevent touch context menu
+        img.addEventListener('dragstart', (e) => e.preventDefault()); // Prevent dragging
+    });
+
     // Prevent right-click and touch context menu in lightbox
-    lightbox.addEventListener('contextmenu', (e) => e.preventDefault()); // Prevent right-click
-    lightbox.addEventListener('touchstart', (e) => e.preventDefault()); // Prevent touch context menu
-    lightbox.addEventListener('dragstart', (e) => e.preventDefault()); // Prevent dragging on lightbox image
+    if (lightbox) { // Check if lightbox exists
+        lightbox.addEventListener('contextmenu', (e) => e.preventDefault()); // Prevent right-click
+        lightbox.addEventListener('touchstart', (e) => e.preventDefault()); // Prevent touch context menu
+        lightbox.addEventListener('dragstart', (e) => e.preventDefault()); // Prevent dragging on lightbox image
+    }
 });

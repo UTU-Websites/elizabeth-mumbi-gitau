@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
-    const images = document.querySelectorAll('.gallery img'); // Adjusted selector for gallery images
+    const images = document.querySelectorAll('img');
     const slideshowToggle = document.getElementById('slideshow-toggle');
     let currentImageIndex;
     let slideshowInterval;

@@ -632,7 +632,6 @@ div .main-wake {
   background-color: black;
   color: white;
 }
-
 @media screen and (max-width: 768px) {
   body {
     /*Background Settings*/
@@ -644,6 +643,9 @@ div .main-wake {
     background-repeat: no-repeat;
     position: relative;
   }
+
+ 
+
   #navbar {
     text-align: center;
   }

@@ -189,9 +189,14 @@ ul {
   height: auto;
 }
 
+.map-gap {
+  margin-top: 30px;
+}
+
 .sehemu-aya {
   font-size: 20px;
   text-decoration: underline;
+  margin-bottom: 2px;
 }
 
 .c-sehemu {

@@ -24,11 +24,22 @@ window.addEventListener('scroll', function () {
 
   lastScrollPosition = currentScrollPosition;
 });
+//img-dog
+document.querySelectorAll('img').forEach((img) => {
+  img.oncontextmenu = () => false; // Disable right-click context menu
+  img.ondragstart = () => false;   // Disable drag
+
+  // Prevent long-press context menu on mobile
+  img.addEventListener('touchstart', (e) => {
+      e.preventDefault(); // Prevent long press without affecting swipe
+  });
+});
+
 
 //alert toast
 document.addEventListener('DOMContentLoaded', function () {
   var pbnjToast = new bootstrap.Toast(document.getElementById('pbnjToast'), {
-    delay: 6000 //seconds
+    delay: 10000 //seconds
   });
   pbnjToast.show();
 });

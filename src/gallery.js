@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+
 // JavaScript for Lightbox
 document.addEventListener('DOMContentLoaded', function() {
     const lightbox = document.getElementById('lightbox');
@@ -96,8 +97,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add click and touch event listeners to images
     images.forEach((img, index) => {
         img.addEventListener('click', () => openLightbox(index));
+        
+        // Prevent the default context menu on long-press and drag
+        img.addEventListener('contextmenu', (e) => e.preventDefault()); // Prevent right-click
+        img.addEventListener('dragstart', (e) => e.preventDefault()); // Prevent dragging
         img.addEventListener('touchstart', (e) => {
-            e.preventDefault(); // Prevent touch context menu
+            e.preventDefault(); // Prevent default touch actions
             openLightbox(index); // Open lightbox on touch
         });
     });
@@ -115,16 +120,29 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Prevent right-click and touch context menu on images
-    images.forEach(img => {
-        img.addEventListener('contextmenu', (e) => e.preventDefault()); // Prevent right-click
-        img.addEventListener('dragstart', (e) => e.preventDefault()); // Prevent dragging
-    });
-
     // Prevent right-click and touch context menu in lightbox
     if (lightbox) { // Check if lightbox exists
         lightbox.addEventListener('contextmenu', (e) => e.preventDefault()); // Prevent right-click
         lightbox.addEventListener('dragstart', (e) => e.preventDefault()); // Prevent dragging on lightbox image
     }
+    
+    // Touch handling for preventing long press
+    let touchStartY = 0;
+    let touchEndY = 0;
+
+    lightbox.addEventListener('touchstart', (e) => {
+        touchStartY = e.changedTouches[0].screenY;
+    });
+
+    lightbox.addEventListener('touchmove', (e) => {
+        touchEndY = e.changedTouches[0].screenY;
+        const touchDiff = touchStartY - touchEndY;
+
+        // Allow scrolling if the user is not trying to open the lightbox
+        if (Math.abs(touchDiff) > 10) { // Adjust the threshold as needed
+            e.stopPropagation(); // Stop event propagation to prevent opening lightbox
+        }
+    });
 });
+
 

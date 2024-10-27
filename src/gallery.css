@@ -111,8 +111,8 @@ img:hover {
 
 .close {
   position: absolute;
-  top: 15px;
-  right: 35px;
+  top: 58px;
+  right: 30px;
   color: #fff;
   font-size: 40px;
   font-weight: bold;
@@ -163,11 +163,6 @@ img:hover {
   font-size: 16px;
   cursor: pointer;
 }
-
-.slideshow-toggle:hover {
-  background-color: rgba(255, 255, 255, 1);
-}
-
 
 @media only screen and (max-width: 768px) {
   .lightbox-content {

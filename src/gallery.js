@@ -127,23 +127,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Touch handling for preventing long press
-let touchStartY = 0;
-let touchEndY = 0;
+    let touchStartY = 0;
+    let touchEndY = 0;
 
-lightbox.addEventListener('touchstart', (e) => {
-    touchStartY = e.changedTouches[0].screenY;
+    lightbox.addEventListener('touchstart', (e) => {
+        touchStartY = e.changedTouches[0].screenY;
+    });
+
+    lightbox.addEventListener('touchmove', (e) => {
+        touchEndY = e.changedTouches[0].screenY;
+        const touchDiff = touchStartY - touchEndY;
+
+        // Allow scrolling if the user is not trying to open the lightbox
+        if (Math.abs(touchDiff) > 30) { // Adjust the threshold as needed
+            e.stopPropagation(); // Stop event propagation to prevent opening lightbox
+        }
+    });
+
 });
-
-lightbox.addEventListener('touchmove', (e) => {
-    touchEndY = e.changedTouches[0].screenY;
-    const touchDiff = touchStartY - touchEndY;
-
-    // Allow scrolling if the user is not trying to open the lightbox
-    if (Math.abs(touchDiff) > 30) { // Adjust the threshold as needed
-        e.stopPropagation(); // Stop event propagation to prevent opening lightbox
-    }
-});
-
-});
-
-

@@ -19,6 +19,11 @@ document.addEventListener('DOMContentLoaded', function() {
     let slideshowInterval;
     let isPlaying = false;
 
+    // Variables to track touch scroll sensitivity
+    let touchStartY = 0;
+    let touchEndY = 0;
+    const touchThreshold = 100; // Adjust sensitivity threshold as needed
+
     // Open the lightbox with the selected image
     function openLightbox(index) {
         lightbox.classList.add('active');
@@ -101,9 +106,29 @@ document.addEventListener('DOMContentLoaded', function() {
         // Prevent the default context menu on long-press and drag
         img.addEventListener('contextmenu', (e) => e.preventDefault()); // Prevent right-click
         img.addEventListener('dragstart', (e) => e.preventDefault()); // Prevent dragging
+
+        // Touch handling for image tap, only opens if not scrolled
         img.addEventListener('touchstart', (e) => {
-            e.preventDefault(); // Prevent default touch actions
-            openLightbox(index); // Open lightbox on touch
+            touchStartY = e.changedTouches[0].screenY;
+        });
+
+        img.addEventListener('touchmove', (e) => {
+            touchEndY = e.changedTouches[0].screenY;
+            const touchDiff = Math.abs(touchStartY - touchEndY);
+
+            // Stop propagation if threshold is exceeded (allowing scroll without lightbox open)
+            if (touchDiff > touchThreshold) {
+                e.stopPropagation();
+            }
+        });
+
+        img.addEventListener('touchend', (e) => {
+            const touchDiff = Math.abs(touchStartY - touchEndY);
+            if (touchDiff < touchThreshold) { 
+                openLightbox(index); // Minimal movement, so open lightbox
+            }
+            touchStartY = 0; // Reset after each touch
+            touchEndY = 0;
         });
     });
 
@@ -125,23 +150,5 @@ document.addEventListener('DOMContentLoaded', function() {
         lightbox.addEventListener('contextmenu', (e) => e.preventDefault()); // Prevent right-click
         lightbox.addEventListener('dragstart', (e) => e.preventDefault()); // Prevent dragging on lightbox image
     }
-    
-    // Touch handling for preventing long press
-    let touchStartY = 0;
-    let touchEndY = 0;
-
-    lightbox.addEventListener('touchstart', (e) => {
-        touchStartY = e.changedTouches[0].screenY;
-    });
-
-    lightbox.addEventListener('touchmove', (e) => {
-        touchEndY = e.changedTouches[0].screenY;
-        const touchDiff = touchStartY - touchEndY;
-
-        // Allow scrolling if the user is not trying to open the lightbox
-        if (Math.abs(touchDiff) > 150) { // Adjust the threshold as needed
-            e.stopPropagation(); // Stop event propagation to prevent opening lightbox
-        }
-    });
-
 });
+

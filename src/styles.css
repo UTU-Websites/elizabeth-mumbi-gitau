@@ -513,12 +513,14 @@ div .main-wake {
 .aya-topic {
   text-align: left;
   padding-bottom: 15px;
+  padding-left: 10px;
 }
 
 .aya-topic-title {
   padding-bottom: 5px;
-  font-family: var(--secondary-font-family);
-  font-size: 30px;
+  font-style: italic;
+  text-transform: capitalize;
+  font-size: 20px;
   font-weight: 600px;
 }
 

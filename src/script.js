@@ -85,9 +85,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
   buttons.forEach(function(button) {
     button.addEventListener("click", function() {
-      var parentParagraph = this.closest('p'); // Find the closest parent <p> element
-      var dots = parentParagraph.querySelector(".dots");
-      var moreText = parentParagraph.querySelector(".more");
+      var parentLi = this.closest('.aya-topic', 'p', 'td'); // Find the closest parent <li> element
+      var dots = parentLi.querySelector(".dots");
+      var moreText = parentLi.querySelector(".more");
       
       if (dots.style.display === "none") {
         dots.style.display = "inline";

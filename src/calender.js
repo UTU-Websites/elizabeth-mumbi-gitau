@@ -25,15 +25,31 @@ window.addEventListener('scroll', function () {
   lastScrollPosition = currentScrollPosition;
 });
 
-const toastTrigger = document.getElementById('liveToastBtn')
-const toastLiveExample = document.getElementById('liveToast')
+// Toast initialization function for multiple toasts
+function initializeToasts() {
+  const toastButtons = [
+      { buttonId: "liveToastBtn", toastId: "liveToast" },
+      { buttonId: "liveToastBtn1", toastId: "liveToast1" },
+      { buttonId: "toastButton1", toastId: "toast1" },
+      { buttonId: "toastButton2", toastId: "toast2" }
+  ];
 
-if (toastTrigger) {
-  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-  toastTrigger.addEventListener('click', () => {
-    toastBootstrap.show()
-  })
+  toastButtons.forEach(({ buttonId, toastId }) => {
+      const button = document.getElementById(buttonId);
+      const toastElement = document.getElementById(toastId);
+
+      if (button && toastElement) {
+          const toastInstance = new bootstrap.Toast(toastElement);
+          button.addEventListener("click", () => {
+              toastInstance.show();
+          });
+      }
+  });
 }
+
+// Run the initialization on page load
+document.addEventListener("DOMContentLoaded", initializeToasts);
+
 
 // Add event listener to the button when the DOM content is loaded
 document.addEventListener("DOMContentLoaded", function() {

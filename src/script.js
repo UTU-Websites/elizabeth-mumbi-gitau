@@ -45,23 +45,30 @@ document.addEventListener('DOMContentLoaded', function () {
   pbnjToast.show();
 });
 
-// Select all buttons that trigger toasts
-const toastTriggers = document.querySelectorAll('[id^="liveToastBtn"]');
+// Toast initialization function for multiple toasts
+function initializeToasts() {
+  const toastButtons = [
+      { buttonId: "liveToastBtn", toastId: "liveToast" },
+      { buttonId: "liveToastBtn1", toastId: "liveToast1" },
+      { buttonId: "toastButton1", toastId: "toast1" },
+      { buttonId: "toastButton2", toastId: "toast2" }
+  ];
 
-toastTriggers.forEach(trigger => {
-  // Get the unique ID for the toast container
-  const toastId = trigger.id.replace('Btn', ''); // E.g., turns 'liveToastBtn1' into 'liveToast1'
-  const toastElement = document.getElementById(toastId);
+  toastButtons.forEach(({ buttonId, toastId }) => {
+      const button = document.getElementById(buttonId);
+      const toastElement = document.getElementById(toastId);
 
-  if (toastElement) {
-    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastElement);
+      if (button && toastElement) {
+          const toastInstance = new bootstrap.Toast(toastElement);
+          button.addEventListener("click", () => {
+              toastInstance.show();
+          });
+      }
+  });
+}
 
-    // Show the specific toast when its button is clicked
-    trigger.addEventListener('click', () => {
-      toastBootstrap.show();
-    });
-  }
-});
+// Run the initialization on page load
+document.addEventListener("DOMContentLoaded", initializeToasts);
 
 
 document.addEventListener('DOMContentLoaded', function() {

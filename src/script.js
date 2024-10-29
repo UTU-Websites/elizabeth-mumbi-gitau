@@ -120,21 +120,25 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const subheader = document.getElementById('dynamicSubheader');
+
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('section');
+  const dynamicSubheader = document.getElementById('dynamicSubheader');
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        const newText = entry.target.getAttribute('data-text');
-        subheader.textContent = newText;
+        dynamicSubheader.textContent = entry.target.getAttribute('data-text');
       }
     });
   }, {
-    threshold: 0.5
+    threshold: 0.1, // Adjusted threshold for sensitivity
+
   });
 
-  document.querySelectorAll('section').forEach(section => {
+  sections.forEach(section => {
     observer.observe(section);
   });
 });
+
+

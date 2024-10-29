@@ -119,3 +119,22 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const subheader = document.getElementById('dynamicSubheader');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const newText = entry.target.getAttribute('data-text');
+        subheader.textContent = newText;
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
+
+  document.querySelectorAll('section').forEach(section => {
+    observer.observe(section);
+  });
+});

@@ -110,6 +110,23 @@ img {
 a {
   text-decoration: none;
 }
+/*Images overlay*/
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Adjust height if needed */
+  background-color: rgba(255, 255, 255, 0.0); /* Fully transparent */
+  z-index: 10; /* Make sure it's above the image */
+  pointer-events: auto; /* Allows interaction if needed */
+}
+
 
 /*Home page*/
 #container-design {
@@ -711,6 +728,17 @@ div .main-wake {
 #more {
   display:none;
 }
+
+#dynamicSubheader {
+  position: sticky;
+  top: 0;
+  background-color: white; /* Optional: background to improve readability */
+  padding: 10px 0;
+  z-index: 1000;
+  text-align: center;
+  transition: opacity 0.3s;
+}
+
 
 /*Appreciation*/
 .custom-message-title {

@@ -20,6 +20,30 @@ div .col, .row {
   margin: 0;
 }
 
+/* Images overlay */
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0); /* Fully transparent */
+  z-index: 10; /* Make sure it's above the image */
+  pointer-events: none; /* Allows clicks to pass through to the image */
+}
+
+.image-wrapper img {
+  display: block; /* Prevents inline spacing issues */
+  user-select: none; /* Prevents text selection */
+  -webkit-user-drag: none; /* Prevents image drag in webkit browsers */
+}
+
+
 .picha-sehemu {
   font-size: 45px;
   font-family: var(--secondary-font-family);

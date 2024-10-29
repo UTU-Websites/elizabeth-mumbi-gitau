@@ -24,6 +24,7 @@ window.addEventListener('scroll', function () {
 
   lastScrollPosition = currentScrollPosition;
 });
+
 //img-dog
 document.querySelectorAll('img').forEach((img) => {
   img.oncontextmenu = () => false; // Disable right-click context menu
@@ -44,16 +45,24 @@ document.addEventListener('DOMContentLoaded', function () {
   pbnjToast.show();
 });
 
-//important notice
-const toastTrigger = document.getElementById('liveToastBtn')
-const toastLiveExample = document.getElementById('liveToast')
+// Select all buttons that trigger toasts
+const toastTriggers = document.querySelectorAll('[id^="liveToastBtn"]');
 
-if (toastTrigger) {
-  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-  toastTrigger.addEventListener('click', () => {
-    toastBootstrap.show()
-  })
-}
+toastTriggers.forEach(trigger => {
+  // Get the unique ID for the toast container
+  const toastId = trigger.id.replace('Btn', ''); // E.g., turns 'liveToastBtn1' into 'liveToast1'
+  const toastElement = document.getElementById(toastId);
+
+  if (toastElement) {
+    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastElement);
+
+    // Show the specific toast when its button is clicked
+    trigger.addEventListener('click', () => {
+      toastBootstrap.show();
+    });
+  }
+});
+
 
 document.addEventListener('DOMContentLoaded', function() {
   var coll = document.getElementsByClassName("collapsible");

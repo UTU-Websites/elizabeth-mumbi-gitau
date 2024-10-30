@@ -441,10 +441,18 @@ ul {
   text-align: start;
   padding: 10px 6px 3px 6px;
   font-size: 18px;
+  position: relative;
+    margin: 10px 0;
+    border-bottom: 1.5px solid #ddd;
+    border-radius: 4px;
 } 
+
+
 .event-time {
   text-align: center;
   font-size: 16px;
+  margin-right: 10px;
+  margin-bottom: 20px;
 }
 
 /*Wake Schedule*/

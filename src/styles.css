@@ -769,6 +769,18 @@ section {
   background-color: black;
   color: white;
 }
+
+
+/*adjustments*/
+.row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.col {
+  width: 100%;
+}
 @media screen and (max-width: 768px) and (max-width: 987px;) {
   body {
     /*Background Settings*/
@@ -782,21 +794,10 @@ section {
     margin: 0;
   } 
 
-  div, p, td, li, span, table {
-    font-size: clamp(1rem, 1.2vw + 0.5rem, 1.5rem); 
-  }
-
-  h1 {
-    font-size: clamp(2rem, 4vw + 1rem, 5rem); 
-  }
-  h2-3 {
-    font-size: clamp(1.25rem, 1.5vw + 0.75rem, 2.5rem); 
-  }
-
   #navbar {
     text-align: center;
   }
- 
+
 }
 
 @media screen and (max-width: 1024px) {
@@ -823,6 +824,9 @@ section {
     font-size: clamp(1.25rem, 1.5vw + 0.75rem, 2.5rem); 
   }
 
+  .no-column-large .row {
+    flex-direction: row;
+  }
 }
 
 @media screen and (max-width: 1280px) {
@@ -852,7 +856,9 @@ section {
   #navbar {
     text-align: center;
   }
- 
+  .no-column-large .row {
+    flex-direction: row;
+  }
 }
 
 @media screen and (max-width: 1366px) {
@@ -883,6 +889,9 @@ section {
     text-align: center;
   }
 
+  .no-column-large .row {
+    flex-direction: row;
+  }
 }
 
 @media screen and (max-width: 1440px) {
@@ -913,6 +922,9 @@ section {
     text-align: center;
   }
 
+  .no-column-large .row {
+    flex-direction: row;
+  }
 }
 
 @media screen and (max-width: 1600px) {
@@ -943,6 +955,9 @@ section {
     text-align: center;
   }
   
+  .no-column-large .row {
+    flex-direction: row;
+  }
 }
 
 @media screen and (max-width: 1920px) {
@@ -973,5 +988,8 @@ section {
     text-align: center;
   }
 
+  .no-column-large .row {
+    flex-direction: row;
+  }
 
 }

@@ -481,10 +481,10 @@ div .main-wake {
   text-align: center;
 }
 .hymn-verse {
-  padding: 10px 0 10px 0;
+  padding: 10px 0px 13px 0;
 }
 .hymn-v-number {
-  font-size: 80px;
+  font-size: 70px;
   font-family: var(--secondary-font-family);
   color: var(--main-color-theme);
 }

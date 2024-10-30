@@ -8,6 +8,24 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// JavaScript to close the navbar when clicking outside of it
+document.addEventListener('click', function (event) {
+  const navbar = document.getElementById('navbarNavDropdown');
+  const toggler = document.querySelector('.navbar-toggler');
+
+  // Check if the clicked target is not the navbar or the toggler button
+  if (!navbar.contains(event.target) && !toggler.contains(event.target)) {
+      // Collapse the navbar if it is open
+      if (navbar.classList.contains('show')) {
+          const bsCollapse = new bootstrap.Collapse(navbar, {
+              toggle: false
+          });
+          bsCollapse.hide();
+      }
+  }
+});
+
+
 let lastScrollPosition = 0;
 const navbar = document.getElementById('navbar');
 

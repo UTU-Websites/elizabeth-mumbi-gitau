@@ -14,7 +14,8 @@
   --primary-margin: 20px;
 }
 
-body {
+
+html, body {
   /*Background Settings*/
   background-image: url("https://lh3.googleusercontent.com/pw/AP1GczNyccN9AzsGc2fo-Rmshm7h6VMlOxbu7jqcjD5AyC1apleFL6YjoUqfUKluq4AYGjuEe4wq0SbgM_0m66GqADSeUai8XRFyERFlbcbbrSjdTC4PfTNZY56CbOiMMSS5T9Q-nWFJ1pp8S-SiPE_i9LFZ=w697-h523-s-no-gm?authuser=0");
   width: 100%;
@@ -23,6 +24,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  margin: 0;
 }
 
 div {
@@ -767,7 +769,7 @@ section {
   background-color: black;
   color: white;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (max-width: 987px;) {
   body {
     /*Background Settings*/
     background-image: url("https://lh3.googleusercontent.com/pw/AP1GczNyccN9AzsGc2fo-Rmshm7h6VMlOxbu7jqcjD5AyC1apleFL6YjoUqfUKluq4AYGjuEe4wq0SbgM_0m66GqADSeUai8XRFyERFlbcbbrSjdTC4PfTNZY56CbOiMMSS5T9Q-nWFJ1pp8S-SiPE_i9LFZ=w697-h523-s-no-gm?authuser=0");
@@ -777,22 +779,18 @@ section {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    
+    margin: 0;
   } 
 
   div, p, td, li, span, table {
-    font-size: clamp(1rem, 1.2vw + 0.5rem, 1.5rem) !important; 
-  }
-
-  span{
-    font-size: clamp(1.5rem, 2vw + 0.5rem, 3rem) !important; 
+    font-size: clamp(1rem, 1.2vw + 0.5rem, 1.5rem); 
   }
 
   h1 {
-    font-size: clamp(2rem, 4vw + 1rem, 5rem) !important; 
+    font-size: clamp(2rem, 4vw + 1rem, 5rem); 
   }
   h2-3 {
-    font-size: clamp(1.25rem, 1.5vw + 0.75rem, 2.5rem) !important; 
+    font-size: clamp(1.25rem, 1.5vw + 0.75rem, 2.5rem); 
   }
 
   #navbar {
@@ -812,136 +810,104 @@ section {
 
 @media screen and (max-width: 1024px) {
   div, p, td, li, span, table {
-    font-size: clamp(1rem, 1.2vw + 0.5rem, 1.5rem) !important; 
-  }
-
-  span{
-    font-size: clamp(1.5rem, 2vw + 0.5rem, 3rem) !important; 
+    font-size: clamp(1rem, 1.2vw + 0.5rem, 1.5rem); 
   }
 
   h1 {
-    font-size: clamp(2rem, 4vw + 1rem, 5rem) !important; 
+    font-size: clamp(2rem, 4vw + 1rem, 5rem); 
   }
   h2-3 {
-    font-size: clamp(1.25rem, 1.5vw + 0.75rem, 2.5rem) !important; 
+    font-size: clamp(1.25rem, 1.5vw + 0.75rem, 2.5rem); 
   }
 }
 
 @media screen and (max-width: 1280px) {
   div, p, td, li, span, table {
-    font-size: clamp(1rem, 1.2vw + 0.5rem, 1.5rem) !important; 
-  }
-
-  span{
-    font-size: clamp(1.5rem, 2vw + 0.5rem, 3rem) !important; 
+    font-size: clamp(1rem, 1.2vw + 0.5rem, 1.5rem); 
   }
 
   h1 {
-    font-size: clamp(2rem, 4vw + 1rem, 5rem) !important; 
+    font-size: clamp(2rem, 4vw + 1rem, 5rem); 
   }
   h2-3 {
-    font-size: clamp(1.25rem, 1.5vw + 0.75rem, 2.5rem) !important; 
+    font-size: clamp(1.25rem, 1.5vw + 0.75rem, 2.5rem); 
   }
 }
 
 @media screen and (max-width: 1366px) {
   div, p, td, li, span, table {
-    font-size: clamp(1rem, 1.2vw + 0.5rem, 1.5rem) !important; 
-  }
-
-  span{
-    font-size: clamp(1.5rem, 2vw + 0.5rem, 3rem) !important; 
+    font-size: clamp(1rem, 1.2vw + 0.5rem, 1.5rem); 
   }
 
   h1 {
-    font-size: clamp(2rem, 4vw + 1rem, 5rem) !important; 
+    font-size: clamp(2rem, 4vw + 1rem, 5rem); 
   }
   h2-3 {
-    font-size: clamp(1.25rem, 1.5vw + 0.75rem, 2.5rem) !important; 
+    font-size: clamp(1.25rem, 1.5vw + 0.75rem, 2.5rem); 
   }
 }
 
 @media screen and (max-width: 1440px) {
   div, p, td, li, span, table {
-    font-size: clamp(1rem, 1.2vw + 0.5rem, 1.5rem) !important; 
-  }
-
-  span{
-    font-size: clamp(1.5rem, 2vw + 0.5rem, 3rem) !important; 
+    font-size: clamp(1rem, 1.2vw + 0.5rem, 1.5rem); 
   }
 
   h1 {
-    font-size: clamp(2rem, 4vw + 1rem, 5rem) !important; 
+    font-size: clamp(2rem, 4vw + 1rem, 5rem); 
   }
   h2-3 {
-    font-size: clamp(1.25rem, 1.5vw + 0.75rem, 2.5rem) !important; 
+    font-size: clamp(1.25rem, 1.5vw + 0.75rem, 2.5rem); 
   }
 }
 
 @media screen and (max-width: 1600px) {
   div, p, td, li, span, table {
-    font-size: clamp(1rem, 1.2vw + 0.5rem, 1.5rem) !important; 
-  }
-
-  span{
-    font-size: clamp(1.5rem, 2vw + 0.5rem, 3rem) !important; 
+    font-size: clamp(1rem, 1.2vw + 0.5rem, 1.5rem); 
   }
 
   h1 {
-    font-size: clamp(2rem, 4vw + 1rem, 5rem) !important; 
+    font-size: clamp(2rem, 4vw + 1rem, 5rem); 
   }
   h2-3 {
-    font-size: clamp(1.25rem, 1.5vw + 0.75rem, 2.5rem) !important; 
+    font-size: clamp(1.25rem, 1.5vw + 0.75rem, 2.5rem); 
   }
 }
 
 @media screen and (max-width: 1920px) {
   div, p, td, li, span, table {
-    font-size: clamp(1rem, 1.2vw + 0.5rem, 1.5rem) !important; 
-  }
-
-  span{
-    font-size: clamp(1.5rem, 2vw + 0.5rem, 3rem) !important; 
+    font-size: clamp(1rem, 1.2vw + 0.5rem, 1.5rem); 
   }
 
   h1 {
-    font-size: clamp(2rem, 4vw + 1rem, 5rem) !important; 
+    font-size: clamp(2rem, 4vw + 1rem, 5rem); 
   }
   h2-3 {
-    font-size: clamp(1.25rem, 1.5vw + 0.75rem, 2.5rem) !important; 
+    font-size: clamp(1.25rem, 1.5vw + 0.75rem, 2.5rem); 
   }
 }
 
 @media screen and (max-width: 2560px) {
   div, p, td, li, span, table {
-    font-size: clamp(1rem, 1.2vw + 0.5rem, 1.5rem) !important; 
-  }
-
-  span{
-    font-size: clamp(1.5rem, 2vw + 0.5rem, 3rem) !important; 
+    font-size: clamp(1rem, 1.2vw + 0.5rem, 1.5rem); 
   }
 
   h1 {
-    font-size: clamp(2rem, 4vw + 1rem, 5rem) !important; 
+    font-size: clamp(2rem, 4vw + 1rem, 5rem); 
   }
   h2-3 {
-    font-size: clamp(1.25rem, 1.5vw + 0.75rem, 2.5rem) !important; 
+    font-size: clamp(1.25rem, 1.5vw + 0.75rem, 2.5rem); 
   }
 }
 
 @media screen and (max-width: 3840px) {
   div, p, td, li, span, table {
-    font-size: clamp(1rem, 1.2vw + 0.5rem, 1.5rem) !important; 
-  }
-
-  span{
-    font-size: clamp(1.5rem, 2vw + 0.5rem, 3rem) !important; 
+    font-size: clamp(1rem, 1.2vw + 0.5rem, 1.5rem); 
   }
 
   h1 {
-    font-size: clamp(2rem, 4vw + 1rem, 5rem) !important; 
+    font-size: clamp(2rem, 4vw + 1rem, 5rem); 
   }
   h2-3 {
-    font-size: clamp(1.25rem, 1.5vw + 0.75rem, 2.5rem) !important; 
+    font-size: clamp(1.25rem, 1.5vw + 0.75rem, 2.5rem); 
   }
 }
